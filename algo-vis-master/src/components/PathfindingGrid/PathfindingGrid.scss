@@ -1,0 +1,110 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+  justify-content: center;
+
+  @include md-max {
+    padding-top: 2.5em;
+  }
+}
+
+.grid-toolbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1em;
+
+  &__button {
+    @include button(transparent);
+    min-width: 80px;
+    width: min-content;
+    padding: 0.2em 1em;
+    font-size: 0.9em;
+
+    &.selected {
+      background-color: $secondary-color;
+    }
+
+    &:disabled {
+      background-color: transparent;
+
+      &:hover {
+        background-color: transparent
+      }
+    }
+  }
+
+    #clear {
+      @include button(transparent);   
+      width: 85px;
+      padding: 0.1em 0.4em;
+      font-size: 0.95em;
+      color: $danger-color;
+    }
+}
+
+.grid {
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.grid__row {
+  display: flex;
+  justify-content: center;
+}
+
+.grid__node {
+  background-color: $background-color;
+  height: 1.2em;
+  width: 1.2em;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  transition: background-color 0.3s ease-out;
+
+  &.start {
+    background-color: rgb(246, 140, 12);
+  }
+
+  &.finish {
+    background-color: rgb(246, 140, 12);
+  }
+
+  &.wall {
+    background-color: $main-color-1;
+  }
+
+  &.weight {
+    background-color: $main-color-5;
+  }
+
+  &.path {
+    background-color: $main-color-4;
+  }
+
+  &.visited {
+    background-color: $secondary-color;
+    animation-name: visitedAnimation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.4s;
+  }
+}
+
+
+@keyframes visitedAnimation {
+  0% {
+    background-color: #feda64;
+  }
+
+  100% {
+    background-color: $main-color-3;
+  }
+}

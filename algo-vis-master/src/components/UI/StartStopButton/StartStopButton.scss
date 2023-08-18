@@ -1,0 +1,10 @@
+@import "../../../styles/_mixins";
+
+.start-button {
+    @include button($success-color);
+}
+
+.stop-button {
+    @include button($danger-color);
+}
+

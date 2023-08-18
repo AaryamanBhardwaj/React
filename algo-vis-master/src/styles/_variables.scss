@@ -1,0 +1,27 @@
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$primary-color: #0f4c5c;
+$secondary-color: #f2cc8f;
+$background-color: #fff2da;
+$danger-color: #ab5757;
+$success-color: #2a9d8f;
+$muted-color: #b7b7b7;
+$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+sans-serif;
+
+$main-color-1: #0f4c5c;
+$main-color-2: #e76f51;
+$main-color-3: #ffc300;
+$main-color-4: #2a9d8f;
+$main-color-5: #8f2d56;
+
+// sort visualizer
+$default-color: $main-color-1;
+$compare-color: $main-color-2;
+$swap-color: $main-color-3;
+$sorted-color: $main-color-4;
+$pivot-color: $main-color-5;

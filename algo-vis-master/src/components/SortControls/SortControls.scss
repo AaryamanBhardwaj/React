@@ -1,0 +1,7 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+.reset-button {
+    @include button($secondary-color);
+    height: 100%;
+    width: 100%;    
+}

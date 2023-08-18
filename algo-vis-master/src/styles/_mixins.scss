@@ -1,0 +1,26 @@
+@import './variables';
+
+@mixin md-min {
+    @media only screen and (min-width: $screen-md) {
+      @content;
+    }
+  }
+  
+  @mixin md-max {
+    @media only screen and (max-width: $screen-md) {
+      @content;
+    }
+  }
+
+  @mixin button($bg-color) {
+    background: $bg-color;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1em;
+
+    &:hover {
+      background:darken($bg-color,5%);
+      transition: all 0.2s ease-in;
+    } 
+  }
+

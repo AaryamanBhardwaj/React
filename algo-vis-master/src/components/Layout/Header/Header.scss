@@ -1,0 +1,17 @@
+.nav {
+    position: absolute;
+    top: 0.5em;
+    left: 1em;
+    width: 95%;
+    z-index: 10;
+}
+
+.navbar {
+    align-self: center;
+    min-height: 2em; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+}
